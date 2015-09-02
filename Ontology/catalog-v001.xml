@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+   <group xmlns=""
+          id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2"
+          prefer="public"
+          xml:base="">
+      <uri id="Automatically generated entry, Timestamp=1422457059066"
+           name="http://www.co-ode.org/ontologies/photography/photography.owl"
+           uri="photography.owl"/>
+      <uri id="Automatically generated entry, Timestamp=1422457059066"
+           name="duplicate:http://www.co-ode.org/ontologies/pizza/pizza.owl"
+           uri="pizza.owl"/>
+      <uri id="Automatically generated entry, Timestamp=1422457059066"
+           name="duplicate:http://www.co-ode.org/ontologies/pizza/pizza.owl"
+           uri="Pizzatest.owl"/>
+      <uri id="Automatically generated entry, Timestamp=1422457059066"
+           name="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged"
+           uri="potatoesMerged.owl"/>
+   </group>
+</catalog>

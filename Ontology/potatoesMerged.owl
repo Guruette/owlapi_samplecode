@@ -1,0 +1,1004 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#"
+     xml:base="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CroppingTime"/>
+        <rdfs:domain rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole">
+        <rdfs:range rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+        <rdfs:domain rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield -->
+
+    <owl:ObjectProperty rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:range rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Accent -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Accent">
+        <rdfs:label>Accent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LateFirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking">
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling">
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips">
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CroppingTime -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CroppingTime">
+        <rdfs:label>Cropping time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Desiree -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Desiree">
+        <rdfs:label>Desiree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#FirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#EarlyCropping -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#EarlyCropping">
+        <rdfs:label>Early crop</rdfs:label>
+        <rdfs:label>Early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CroppingTime"/>
+        <owl:disjointWith rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#FirstEarlyCropping -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#FirstEarlyCropping">
+        <rdfs:label>First early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#EarlyCropping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#GoldenWonder -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#GoldenWonder">
+        <rdfs:label>Golden wonder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LowYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield">
+        <rdfs:label>High yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#InternationalKidney -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#InternationalKidney">
+        <rdfs:label>International kidney</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MediumYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Juliette -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Juliette">
+        <rdfs:label>Juliette</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MediumYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LateFirstEarlyCropping -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LateFirstEarlyCropping">
+        <rdfs:label>Late first early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#EarlyCropping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LowYield -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LowYield">
+        <rdfs:label>Low yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop">
+        <rdfs:label>Main cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CroppingTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MarisPiper -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MarisPiper">
+        <rdfs:label>Maris Piper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#VeryHighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Markies -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Markies">
+        <rdfs:label>Markies</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#SecondEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing">
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MediumYield -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MediumYield">
+        <rdfs:label>Medium yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PentlandDell -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PentlandDell">
+        <rdfs:label>Pentland Dell</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LateFirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PinkFirApple -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PinkFirApple">
+        <rdfs:label>Pink Fir Apple</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#FirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato">
+        <rdfs:label>Potato</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Accent"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Desiree"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#GoldenWonder"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#InternationalKidney"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Juliette"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MarisPiper"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Markies"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PentlandDell"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PinkFirApple"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Romano"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Rudolf"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Stemster"/>
+                    <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Wilja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting">
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Romano -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Romano">
+        <rdfs:label>Romano</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MainCrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Rudolf -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Rudolf">
+        <rdfs:label>Rudolf</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#FirstEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad">
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#SecondEarlyCropping -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#SecondEarlyCropping">
+        <rdfs:label>Second early cropping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#EarlyCropping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Stemster -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Stemster">
+        <rdfs:label>Stemster</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#SecondEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#VeryHighYield -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#VeryHighYield">
+        <rdfs:label>Very high yield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Wilja -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Wilja">
+        <rdfs:label>Wilja</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#VeryHighYield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCroppingTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#SecondEarlyCropping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+                            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#hasCulinaryRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield -->
+
+    <owl:Class rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield">
+        <rdfs:label>Potato yield</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Accent"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Desiree"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#GoldenWonder"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#InternationalKidney"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Juliette"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MarisPiper"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Markies"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PentlandDell"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#PinkFirApple"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Romano"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Rudolf"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Stemster"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Wilja"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#FirstEarlyCropping"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LateFirstEarlyCropping"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#SecondEarlyCropping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CroppingTime"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#CulinaryRole"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Potato"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Yield"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#HighYield"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#LowYield"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#MediumYield"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#VeryHighYield"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Baking"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Boiling"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Chips"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Mashing"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Roasting"/>
+            <rdf:Description rdf:about="http://www.what-if.org.uk/CQ/evaluation-2/potatoesMerged#Salad"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

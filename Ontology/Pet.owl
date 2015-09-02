@@ -1,0 +1,283 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9>
+
+
+Datatype: xsd:string
+
+    
+Datatype: xsd:integer
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_team>
+
+    Characteristics: 
+        Functional
+    
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_topping>
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_parent_of>
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#hasFilling>
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_father>
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_father_of>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_parent_of>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_mother_of>
+    
+    Characteristics: 
+        Functional
+    
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_subclass_of>
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_house>
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_married_to>
+
+    Characteristics: 
+        Functional
+    
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_mother_of>
+
+    DisjointWith: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_father_of>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#lives_in>
+
+    Domain: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#person>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_running_towards>
+
+    
+ObjectProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#hasTopping>
+
+    
+DataProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_name>
+
+    
+DataProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_born_in>
+
+    
+DataProperty: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_nickname>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#player>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#person>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#cheese_topping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#topping>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#kennel>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#topping>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#person>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_married_to> max 1 <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#spouse>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#icecream>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#food>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#TomatoTopping>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#spouse>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#person>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#Cake>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#fruit>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#father>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_parent_of> some 
+            (<http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#boy>
+             or <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#girl>),
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#parent>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#menane_to_traffic>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#white_van_driver>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#driver>
+         and <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#menane_to_traffic>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#dog>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#animal>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#FishTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#topping>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#child>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#animal>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#apple>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#fruit>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#driver>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#cat>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#animal>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#food>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#girl>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#child>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#orange>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#fruit>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#boy>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#child>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#parent>
+
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#mother>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#parent>
+    
+    
+Class: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#lemon>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#fruit>
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#Rover>
+
+    Types: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#dog>
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#the_Blagdon_amateur_rapist>
+
+    SameAs: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#John>
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#Fred>
+
+    Types: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_parent_of> value <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#John>,
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_house> some <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#kennel>,
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#animal>
+    
+    Facts:  
+     <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_born_in>  1970
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#Marry>
+
+    Facts:  
+      not  <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_married_to>  <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#John>
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#the_dog>
+
+    Types: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_running_towards> value <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#the_house>
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#John>
+
+    Facts:  
+      not  <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_married_to>  <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#John>
+    
+    SameAs: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#the_Blagdon_amateur_rapist>
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#the_house>
+
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#Jane>
+
+    Types: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#is_born_in> value 1970,
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_nickname> value "JJ"^^xsd:string
+    
+    
+Individual: <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#Jack>
+
+    Types: 
+        <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#boy>
+    
+    Facts:  
+     <http://www.semanticweb.org/artemisparvizi/ontologies/2014/5/untitled-ontology-9#has_name>  "JJ"^^xsd:string
+    
+    
