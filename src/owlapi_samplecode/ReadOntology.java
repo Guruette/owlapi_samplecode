@@ -13,7 +13,7 @@ public class ReadOntology {
 
 	}
 
-	public boolean ReadOntologyFromFile(File file) {
+	public OWLOntology ReadOntologyFromFile(File file) {
 
 		// creating a simple ontology manager
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
@@ -26,10 +26,7 @@ public class ReadOntology {
 			e.printStackTrace();
 		}
 
-		if (localOntology.isEmpty() == false)
-			return true;
-
-		return false;
+		return localOntology;
 
 	}
 
