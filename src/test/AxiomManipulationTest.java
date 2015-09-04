@@ -7,7 +7,6 @@ import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLLogicalAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -50,7 +49,16 @@ public class AxiomManipulationTest {
 	@Test
 	public void annotationExtractionTest(){
 		AxiomManipulation axMan= new AxiomManipulation();
-		Set<OWLAnnotation> annotations=axMan.annotationExtraction(localOntology);
+		Set<String> annotations=axMan.annotationExtraction(localOntology);
+		
+		assertFalse(annotations.isEmpty());
+		
+	}
+	
+	@Test
+	public void classAnnotationTest(){
+		AxiomManipulation axMan= new AxiomManipulation();
+		Set<String> annotations=axMan.classAnnotation(localOntology);
 		
 		assertFalse(annotations.isEmpty());
 		
