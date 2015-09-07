@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 
 import org.junit.Test;
+import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyFormat;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
@@ -23,12 +24,20 @@ public class ReadOntologyTest {
 		File file = new File("Ontology" + File.separator + "pizza.owl");
 		ReadOntology reading = new ReadOntology();
 
-		OWLOntology res = null;
-
 		// testing if we can read file
-		res = reading.ReadOntologyFromFile(file);
+		OWLOntology res = reading.ReadOntologyFromFile(file);
 		assertTrue(!res.isEmpty());
 
+	}
+	
+	@Test
+	public void getDataFactoryTest(){
+		File file = new File("Ontology" + File.separator + "pizza.owl");
+		ReadOntology reading = new ReadOntology();
+		
+		OWLDataFactory factory = reading.getDataFactory(file);
+		
+		assertTrue(!factory.getOWLVersionInfo().getIRI().getFragment().isEmpty());
 	}
 
 	@Test

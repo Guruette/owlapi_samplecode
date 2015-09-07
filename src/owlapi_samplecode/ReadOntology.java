@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.RDFXMLOntologyFormat;
+import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyFormat;
@@ -29,6 +30,19 @@ public class ReadOntology {
 		}
 
 		return localOntology;
+
+	}
+	
+	public OWLDataFactory getDataFactory(File file) {
+
+		// creating a simple ontology manager
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+
+		// load the data factory
+		OWLDataFactory factory = manager.getOWLDataFactory();
+
+
+		return factory;
 
 	}
 
