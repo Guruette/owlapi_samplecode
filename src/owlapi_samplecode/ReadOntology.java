@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.RDFXMLOntologyFormat;
+import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -83,4 +84,13 @@ public class ReadOntology {
 		return newFormat;
 
 	}
+	
+	public IRI getOntologyIRI(OWLOntology localOntology){
+		/***
+		 * extract the ontology IRI
+		 ***/
+		return localOntology.getOntologyID().getOntologyIRI();
+	}
+	
+
 }
