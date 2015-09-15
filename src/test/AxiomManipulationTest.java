@@ -22,7 +22,8 @@ public class AxiomManipulationTest {
 
 	// OWL variables
 	private OWLOntology localOntology = null;
-	private OWLOntologyManager manager =null;
+	private OWLOntologyManager manager = null;
+	private AxiomManipulation axMan = null;
 
 	@Before
 	public void initialise() {
@@ -31,58 +32,55 @@ public class AxiomManipulationTest {
 		ReadOntology reading = new ReadOntology();
 		setLocalOntology(reading.ReadOntologyFromFile(file));
 		setManager(OWLManager.createOWLOntologyManager());
-
+		axMan = new AxiomManipulation();
 	}
 
 	@Test
 	public void ReadingAxiomsTest() {
-		AxiomManipulation axMan= new AxiomManipulation();
-		Set<OWLAxiom> axioms=axMan.ReadingAxioms(getLocalOntology());
-		
+		Set<OWLAxiom> axioms = axMan.ReadingAxioms(getLocalOntology());
+
 		assertFalse(axioms.isEmpty());
 
 	}
-	
+
 	@Test
 	public void ReadingLogicalAxiomsTest() {
-		AxiomManipulation axMan= new AxiomManipulation();
-		Set<OWLLogicalAxiom> axioms=axMan.ReadingLogicalAxioms(getLocalOntology());
-		
+		Set<OWLLogicalAxiom> axioms = axMan
+				.ReadingLogicalAxioms(getLocalOntology());
+
 		assertFalse(axioms.isEmpty());
 
 	}
-	
+
 	@Test
-	public void annotationExtractionTest(){
-		AxiomManipulation axMan= new AxiomManipulation();
-		Set<String> annotations=axMan.annotationExtraction(localOntology);
-		
+	public void annotationExtractionTest() {
+		Set<String> annotations = axMan.annotationExtraction(localOntology);
+
 		assertFalse(annotations.isEmpty());
-		
+
 	}
-	
+
 	@Test
-	public void classAnnotationTest(){
-		AxiomManipulation axMan= new AxiomManipulation();
-		Set<String> annotations=axMan.classAnnotation(localOntology);
-		
+	public void classAnnotationTest() {
+		Set<String> annotations = axMan.classAnnotation(localOntology);
+
 		assertFalse(annotations.isEmpty());
-		
+
 	}
-	
+
 	@Test
-	public void addIndividualTest(){
-		AxiomManipulation axMan= new AxiomManipulation();
+	public void addIndividualTest() {
 		// generate IRI
 		ReadOntology reading = new ReadOntology();
-		IRI base= reading.getOntologyIRI(getLocalOntology());
-		IRI ind_iri = IRI.create(base+"#mexican_pizza");
-		OWLDataFactory df= getManager().getOWLDataFactory();
-		OWLOntologyManager tempManager= axMan.addIndividual(getLocalOntology(), getManager(), df, 
-				base+"#mexican_pizza");
-		
-		assertTrue(tempManager.getOWLDataFactory().getOWLNamedIndividual(ind_iri).isNamed());
-		
+		IRI base = reading.getOntologyIRI(getLocalOntology());
+		IRI ind_iri = IRI.create(base + "#mexican_pizza");
+		OWLDataFactory df = getManager().getOWLDataFactory();
+		OWLOntologyManager tempManager = axMan.addIndividual(
+				getLocalOntology(), getManager(), df, base + "#mexican_pizza");
+
+		assertTrue(tempManager.getOWLDataFactory()
+				.getOWLNamedIndividual(ind_iri).isNamed());
+
 	}
 
 	// getter and setter methods

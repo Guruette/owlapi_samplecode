@@ -28,20 +28,20 @@ public class ObjectPropertiesTest {
 		factory = reading.getDataFactory(file);
 
 	}
-	
+
 	@Test
-	public void individualOPTest(){
-		ObjectProperties op= new ObjectProperties();
-		boolean res= false;
-		
+	public void individualOPTest() {
+		ObjectProperties op = new ObjectProperties();
+		boolean res = false;
+
 		// all annotations
-		res= op.individualOP(localOntology);
+		res = op.individualOP(localOntology);
 		assertTrue(res);
-		
+
 		// specific annotation
-		res= op.individualOP(localOntology, factory);
+		res = op.individualOP(localOntology, factory);
 		assertTrue(res);
-		
+
 	}
 
 	// getter and setter methods

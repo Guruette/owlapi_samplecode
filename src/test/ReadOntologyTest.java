@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -17,27 +18,33 @@ import owlapi_samplecode.ReadOntology;
 
 public class ReadOntologyTest {
 
+	public ReadOntology reading = null;
+
+	@Before
+	public void initialize() {
+		reading = new ReadOntology();
+	}
+
 	@Test
 	public void ReadingOntologyTest() {
 
 		// calling the class with an ontology file
 		File file = new File("Ontology" + File.separator + "pizza.owl");
-		ReadOntology reading = new ReadOntology();
 
 		// testing if we can read file
 		OWLOntology res = reading.ReadOntologyFromFile(file);
 		assertTrue(!res.isEmpty());
 
 	}
-	
+
 	@Test
-	public void getDataFactoryTest(){
+	public void getDataFactoryTest() {
 		File file = new File("Ontology" + File.separator + "pizza.owl");
-		ReadOntology reading = new ReadOntology();
-		
+
 		OWLDataFactory factory = reading.getDataFactory(file);
-		
-		assertTrue(!factory.getOWLVersionInfo().getIRI().getFragment().isEmpty());
+
+		assertTrue(!factory.getOWLVersionInfo().getIRI().getFragment()
+				.isEmpty());
 	}
 
 	@Test
@@ -45,7 +52,6 @@ public class ReadOntologyTest {
 
 		File file = new File("Ontology" + File.separator + "pizza1.owl");
 
-		ReadOntology reading = new ReadOntology();
 		OWLOntology localOntology = reading.ReadOntologyFromFile(file);
 		OWLOntologyManager manager = localOntology.getOWLOntologyManager();
 		OWLOntologyFormat format = reading.convertOntology(localOntology,
